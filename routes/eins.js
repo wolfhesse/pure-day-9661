@@ -8,3 +8,10 @@ exports.eins = function(req, res) {
         name: 'eins'
     });
 };
+
+exports.zwo = function(req, res) {
+    var world = {
+        title: '2er world',
+        name: 'sample world'};
+    res.render('index',world);
+};

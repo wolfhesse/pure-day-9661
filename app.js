@@ -32,13 +32,15 @@ app.configure('production', function() {
 // Routes
 app.get('/', routes.index);
 app.get("/eins", routes.eins);
+app.get("/zwo", routes.zwo);
 app.get("/1", einser.eins);
+app.get("/2", einser.zwo);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
 
-console.log('routes.eins is '+ routes.eins);
-console.log('routes.index is '+ routes.index);
-console.log('einser.eins is '+ einser.eins);
+console.log('routes.eins is ' + routes.eins);
+console.log('routes.index is ' + routes.index);
+console.log('einser.eins is ' + einser.eins);
