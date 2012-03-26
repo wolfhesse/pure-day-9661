@@ -1,16 +1,15 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
-}
-
-#someid {
-    background-color: green;
-    color: yellow;
+    color: #00B7FF;
 }
 .eins {
-    background-color: red;
-}
+        background-color: red;
+    }
+#someid {
+        background-color: green;
+        color: yellow;
+    }
