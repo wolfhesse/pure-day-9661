@@ -1,20 +1,22 @@
 !!!
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  div.small
-    p menu
-    p(style="float:left;padding:5px;")
-        a(href='/') index
-    p(style="float:left;padding:5px;")
-        a(href='/eins') /eins
-    p(style="float:left;padding:5px;")
-        a(href='/zwo') /zwo
-    p(style="float:left;padding:5px;")
-        a(href='/1') /1
-    p(style="float:left;padding:5px;")
-        a(href='/2') /2
-    p(style="clear:both;")
-  body!= body
-  
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        div.small
+            p menu
+            p(style="float:left;padding:5px;")
+                a(href='/') index
+            p(style="float:left;padding:5px;")
+                a(href='/eins') /eins
+            p(style="float:left;padding:5px;")
+                a(href='/zwo') /zwo
+            p(style="float:left;padding:5px;")
+                a(href='/1') /1
+            p(style="float:left;padding:5px;")
+                a(href='/2') /2
+            p(style="clear:both;")
+        -# unescaping HTML with !=
+        div.body!= body
+        script(type='javascript', src='/javascript/ga.js')
