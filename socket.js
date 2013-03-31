@@ -62,3 +62,6 @@ io.sockets.on('connection', function (socket) {
 app.get('/node/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
+app.post('/node/', function (req, res) {
+  res.sendfile(__dirname + '/index.html');
+});
