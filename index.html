@@ -1,5 +1,5 @@
 
-<script src="/socket.io/socket.io.js"></script>
+<script src="/node/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
 <div style="float:left;width:100px;border-right:1px solid black;height:300px;padding:10px;overflow:scroll-y;">
@@ -18,7 +18,9 @@
 <script>
     var herhost='http://pure-day-9661.herokuapp.com/'
     var c9iohost='https://c9.io/wolfhesse/pd9661gh'
-    var socket = io.connect(c9iohost);
+    var yassgit='http://service.yasssu.com'
+    var thehost = yassgit
+    var socket = io.connect(thehost, { resource: 'node/socket.io'});
 
 	// on connection to server, ask for user's name with an anonymous callback
 	socket.on('connect', function(){

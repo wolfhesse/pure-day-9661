@@ -6,6 +6,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  //app.use(express.static(__dirname + '/node_modules'));
 });
 
 app.configure('development', function(){
@@ -16,12 +17,12 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 7337;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
-var io = require('socket.io').listen(app);
+var io = require('socket.io').listen(app, { resource: '/node/socket.io'});
 
 var usernames = {};
 
@@ -58,6 +59,6 @@ io.sockets.on('connection', function (socket) {
 	});
 });
 
-app.get('/', function (req, res) {
+app.get('/node/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
