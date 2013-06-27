@@ -59,5 +59,5 @@ io.sockets.on('connection', function (socket) {
 });
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+  res.sendfile(__dirname + '/public/index.html');
 });
